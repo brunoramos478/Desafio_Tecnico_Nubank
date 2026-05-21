@@ -17,20 +17,21 @@ import java.util.UUID;
 public class Contact {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name= "nome")
     private String name;
 
-    @Column(name= "email")
+    @Column(name= "email", unique = true)
     @Email
     private String email;
 
-    @Column(name= "telefone")
+    @Column(name= "telefone", unique = true)
     private String telephone;
 
     @ManyToOne
+    @JoinColumn(name = "cliente_id")
     private Client client;
 
 }

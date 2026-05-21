@@ -16,8 +16,9 @@ import java.util.UUID;
 @AllArgsConstructor
 public class Client {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", unique = true)
+    private Long id;
 
     @Column(name = "nome", nullable = false)
     private String name;
@@ -26,8 +27,7 @@ public class Client {
     @CPF
     private String cpf;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "cliente_id")
+    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Contact> contatos;
 
 }
