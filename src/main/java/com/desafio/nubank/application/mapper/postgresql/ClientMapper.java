@@ -1,4 +1,4 @@
-package com.desafio.nubank.application.mapper;
+package com.desafio.nubank.application.mapper.postgresql;
 
 import com.desafio.nubank.application.dto.RequestClientDto;
 import com.desafio.nubank.model.postgresql.Client;
@@ -12,7 +12,6 @@ public interface ClientMapper {
     ClientMapper mapping = Mappers.getMapper(ClientMapper.class);
 
     RequestClientDto requestDto(Client client);
-
 
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "contatos", ignore = true)
