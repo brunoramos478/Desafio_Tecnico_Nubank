@@ -18,6 +18,7 @@ public class Contact {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", unique = true)
     private Long id;
 
     @Column(name= "nome")

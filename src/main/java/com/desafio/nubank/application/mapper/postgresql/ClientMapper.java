@@ -14,7 +14,6 @@ public interface ClientMapper {
     RequestClientDto requestDto(Client client);
 
     @Mapping(target = "id", ignore = true)
-    @Mapping(target = "contatos", ignore = true)
     Client user(RequestClientDto requestClientDto);
 
 }

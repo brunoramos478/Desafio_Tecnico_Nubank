@@ -30,11 +30,10 @@ public class Client {
     private String cpf;
 
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Contact> contatos;
+    private List<Contact> contacts;
 
-    @PrePersist
-    public void prePresist() {
-        LocalDateTime createdIn = LocalDateTime.now();
-    }
+    @Column(name = "created_in", updatable = false)
+    private LocalDateTime createdIn = LocalDateTime.now();
+
 
 }
