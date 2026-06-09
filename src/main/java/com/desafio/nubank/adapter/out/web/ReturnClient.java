@@ -3,8 +3,6 @@ package com.desafio.nubank.adapter.out.web;
 import com.desafio.nubank.application.dto.ClientDto;
 import com.desafio.nubank.application.dto.ContactDto;
 import com.desafio.nubank.application.service.ApplicationService;
-import com.desafio.nubank.model.postgresql.Client;
-import com.desafio.nubank.model.postgresql.Contact;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
