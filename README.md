@@ -16,7 +16,7 @@
 
 1.  **Clone o repositório:**
     ```bash
-    git clone <url-do-repositorio>
+    git clone https://github.com/brunoramos478/Desafio_Tecnico_Nubank.git
     ```
 2.  **Configure o banco de dados:**
     *   Crie um banco de dados PostgreSQL.
